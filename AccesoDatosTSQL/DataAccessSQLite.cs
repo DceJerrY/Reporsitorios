@@ -11,19 +11,13 @@ namespace AccesoDatosTSQL
     class DataAccessSQLite : IDataAccess
     {
 
-        private string _cadena = @"Data Source=c:\mydb.db;Version=3;";
+        private string _cadena = string.Empty;
         private SQLiteConnection ObjConection = null;
         private SQLiteCommand ObjCommand = null;
         private SQLiteDataAdapter ObjAdap = null;
         private DataTable ObjDT = null;
 
-        public DataAccessSQLite() {
-            if (ObjConection == null)
-            {
-                ObjConection = new SQLiteConnection(_cadena);
-            }
-        }
-
+      
         public DataAccessSQLite(string cadena_conexion)
         {
             _cadena = cadena_conexion;

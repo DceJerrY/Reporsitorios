@@ -10,19 +10,13 @@ namespace AccesoDatosTSQL
 {
     public class DataAccessMysql: IDataAccess
     {
-        private string _cadena = "server=172.30.5.2;user=root;database=empresa001;port=3306;password=conexion1234";
+        private string _cadena = string.Empty;
         private MySqlConnection ObjConection = null;
         private MySqlCommand ObjCommand = null;
         private MySqlDataAdapter ObjAdap = null;
         private DataTable ObjDT = null;
 
-        public DataAccessMysql()
-        {
-            if (ObjConection == null)
-            {
-                ObjConection = new MySqlConnection(_cadena);
-            }
-        }
+    
         public DataAccessMysql(string cadena_conexion)
         {
             _cadena = cadena_conexion;

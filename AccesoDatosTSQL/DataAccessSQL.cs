@@ -9,19 +9,13 @@ namespace AccesoDatosTSQL
 {
     public class DataAccessSQL : IDataAccess
     {
-        private string _cadena = "Data Source=172.30.5.2 ; Initial Catalog=DBWEBS ;User ID=SA;Password=Romero07;";
+        private string _cadena = string.Empty;
         private SqlConnection ObjConection = null;
         private SqlCommand ObjCommand = null;
         private SqlDataAdapter ObjAdap = null;
         private DataTable ObjDT = null;
 
-        public DataAccessSQL()
-        {
-            if (ObjConection == null)
-            {
-                ObjConection = new SqlConnection(_cadena);
-            }
-        }
+   
 
         public DataAccessSQL(string cadena_conexion)
         {

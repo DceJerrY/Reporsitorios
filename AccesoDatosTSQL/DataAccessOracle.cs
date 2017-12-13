@@ -12,18 +12,12 @@ namespace AccesoDatosTSQL
     class DataAccessOracle : IDataAccess
     {
 
-        private string _cadena = "Data Source=172.30.5.2 ; Initial Catalog=DBWEBS ;User ID=SA;Password=Romero07;";
+        private string _cadena = string.Empty;
         private OracleConnection ObjConection = null;
         private OracleCommand ObjCommand = null;
         private OracleDataAdapter ObjAdap = null;
         private DataTable ObjDT = null;
 
-        public DataAccessOracle() {
-            if (ObjConection == null)
-            {
-                ObjConection = new OracleConnection(_cadena);
-            }
-        }
 
         public DataAccessOracle(string cadena_conexion)
         {

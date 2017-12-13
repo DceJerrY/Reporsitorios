@@ -16,29 +16,6 @@ namespace AccesoDatosTSQL
         /// </summary>
         /// <param name="Tipo"></param>
         /// <returns></returns>
-        public static IDataAccess CreatorDataAcces(int Tipo)
-        {
-            switch (Tipo) {
-                case 1:
-                    return new DataAccessSQL();
-                case 2:
-                    return new DataAccessMysql();
-                case 3:
-                    return new DataAccessOracle();
-                case 4:
-                    return new DataAccessSQLite();
-                default:
-                    return null;
-            }
-        }
-        /// <summary>
-        /// Tipo 1 : SQLSERVER
-        /// Tipo 2 : MySQL
-        /// Tipo 3 : Oracle
-        /// Tipo 4 : SQLite
-        /// </summary>
-        /// <param name="Tipo"></param>
-        /// <returns></returns>
         public static IDataAccess CreatorDataAcces(int Tipo, string Cadena_Conexion)
         {
             switch (Tipo)
