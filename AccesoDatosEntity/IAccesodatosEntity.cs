@@ -11,9 +11,9 @@ namespace AccesoDatosEntity
     {
         TEntity Create<TEntity>(TEntity NewEntitad) where TEntity : class;
 
-        TEntity FindEntity<TEntity>(Expression<Func<TEntity, bool>> Criterio) where TEntity : class;
+         Task<TEntity> FindEntity<TEntity>(Expression<Func<TEntity, bool>> Criterio) where TEntity : class;
 
-        IEnumerable<TEntity> ReadData<TEntity>(Expression<Func<TEntity, bool>> Criterio) where TEntity : class;
+         Task<IEnumerable<TEntity>> ReadData<TEntity>() where TEntity : class;
 
         bool Update<TEntity>(TEntity ModefiedEntity) where TEntity : class;
 
